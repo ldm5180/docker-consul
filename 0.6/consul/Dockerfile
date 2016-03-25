@@ -16,4 +16,6 @@ RUN echo "${CONSUL_SHA256}  /tmp/consul.zip" > /tmp/consul.sha256 \
   && chmod +x /bin/consul \
   && rm /tmp/consul.zip
 
+LABEL distdb="consul"
+
 ENTRYPOINT ["/bin/consul"]
